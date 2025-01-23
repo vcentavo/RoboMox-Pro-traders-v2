@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboMox Pro Traders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            flex: 1;
+        }
+        .balance {
+            text-align: left;
+            flex: 1;
+        }
+        .balance p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+        .pnl-positive {
+            color: green;
+        }
+        .pnl-negative {
+            color: red;
+        }
+        .login {
+            margin-top: 50px;
+        }
+        .login input {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+            width: 200px;
+        }
+        .login button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #77aaff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .presentation {
+            margin-top: 50px;
+        }
+        .presentation h2 {
+            font-size: 2em;
+            color: #333;
+        }
+        .presentation p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        .alert {
+            background: #ffcc00;
+            padding: 10px;
+            margin: 20px 0;
+            color: #333;
+            border-radius: 5px;
+        }
+        .bots {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .bot {
+            background: #fff;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        .bot h3 {
+            margin-top: 0;
+        }
+        .bot button {
+            background: #77aaff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .profiles {
+            margin-top: 50px;
+        }
+        .profiles h2 {
+            font-size: 2em;
+            color: #333;
+        }
+        .profile {
+            background: #fff;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            text-align: left;
+        }
+        .profile h3 {
+            margin-top: 0;
+        }
+        .profile p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="balance">
+            <p>Saldo Atual: $10,000</p>
+            <p class="pnl pnl-positive">PnL: +2%</p>
+        </div>
+        <h1>RoboMox Pro Traders</h1>
+    </header>
+
+    <div class="container">
+        <div class="login">
+            <input type="text" placeholder="Login" id="login" />
+            <button onclick="login()">Login</button>
+        </div>
+        <div class="presentation">
+            <h2>Bem-vindo ao RoboMox Pro Traders</h2>
+            <div class="alert">
+                Lembre-se: Faça no máximo 2% de lucro por dia!
+            </div>
+            <p>O RoboMox Pro Traders é um robô automático de negociação que ajuda você a maximizar seus lucros no mercado financeiro. Com algoritmos avançados e estratégias inteligentes, o RoboMox Pro Traders está aqui para tornar suas negociações mais eficazes e lucrativas.</p>
+        </div>
+        <div class="bots">
+            <div class="bot">
+                <h3>N1 ODD Capitão Cuecas v2.5.01</h3>
+                <button onclick="useBot('N1 ODD Capitão Cuecas v2.5.01')">Usar Bot</button>
+            </div>
+            <div class="bot">
+                <h3>N2 EVEN Kangaroo 2025</h3>
+                <button onclick="useBot('N2 EVEN Kangaroo 2025')">Usar Bot</button>
+            </div>
+            <div class="bot">
+                <h3>N3 🤖ROBÔ Crybaby Digit 8 under=v3.5 2025</h3>
+                <button onclick="useBot('N3 🤖ROBÔ Crybaby Digit 8 under=v3.5 2025')">Usar Bot</button>
+            </div>
+            <div class="bot">
+                <h3>N4🤖 Robot_ Dona Maria Up&Down v2.3</h3>
+                <button onclick="useBot('N4🤖 Robot_ Dona Maria Up&Down v2.3')">Usar Bot</button>
+            </div>
+            <div class="bot">
+                <h3>N5 Over 2🔞ROBÔ_ My Dreams Versão 5.20.25</h3>
+                <button onclick="useBot('N5 Over 2🔞ROBÔ_ My Dreams Versão 5.20.25')">Usar Bot</button>
+            </div>
+            <div class="bot">
+                <h3>N6🤖 Machine Jump 50=2tick Rise or fall v2.3</h3>
+                <button onclick="useBot('N6🤖 Machine Jump 50=2tick Rise or fall v2.3')">Usar Bot</button>
+            </div>
+        </div>
+        <div class="profiles">
+            <h2>Perfis de Investidores</h2>
+            <div class="profile">
+                <h3>Perfil Conservador</h3>
+                <p>Percentual de Lucro: 1% - 2%</p>
+                <p>Descrição: Investidor que prefere minimizar riscos e obter retornos estáveis e seguros.</p>
+            </div>
+            <div class="profile">
+                <h3>Perfil Moderado</h3>
+                <p>Percentual de Lucro: 3% - 5%</p>
+                <p>Descrição: Investidor que aceita um risco moderado para obter retornos melhores.</p>
+            </div>
+            <div class="profile">
+                <h3>Perfil Agressivo</h3>
+                <p>Percentual de Lucro: 6% ou mais</p>
+                <p>Descrição: Investidor que está disposto a correr altos riscos para obter altos retornos.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const login = document.getElementById('login').value;
+            if (login) {
+                window.location.href = "https://oauth.deriv.com/oauth2/authorize?app_id=67600&redirect_uri=https://deriv.com/pt/trading-platforms/deriv-bot";
+            } else {
+                alert('Por favor, insira seu login.');
+            }
+        }
+
+        function useBot(botName) {
+            alert('Você selecionou o ' + botName + '. Faça login para começar a usar.');
+            // Logic to use the bot can be added here
+        }
+
+        // Simulate PnL update function (this would typically be dynamic and based on real data)
+        function updatePnL(pnl) {
+            const pnlElement = document.querySelector('.pnl');
+            pnlElement.textContent = `PnL: ${pnl > 0 ? '+' : ''}${pnl}%`;
+            pnlElement.className = `pnl ${pnl > 0 ? 'pnl-positive' : 'pnl-negative'}`;
+        }
+
+        // Example usage: Update PnL dynamically (this would be replaced with real data updates)
+        setInterval(() => {
+            const randomPnL = (Math.random() * 4 - 2).toFixed(2); // Random PnL between -2% and +2%
+            updatePnL(randomPnL);
+        }, 5000); // Update every 5 seconds
+    </script>
+</body>
+</html>
